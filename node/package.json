@@ -1,0 +1,27 @@
+{
+  "name": "favicon_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asyouwereapx/favicon_app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asyouwereapx/favicon_app/issues"
+  },
+  "homepage": "https://github.com/asyouwereapx/favicon_app#readme",
+  "dependencies": {
+    "faker": "^5.5.3",
+    "knex": "^0.95.4",
+    "pg": "^8.6.0",
+    "pg-format": "^1.0.4"
+  }
+}
