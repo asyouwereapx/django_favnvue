@@ -1,0 +1,10 @@
+{% extends 'my_spotify/main.html' %}
+
+{% block content %}
+
+	<p> {{artist}} </p>
+	{% for album in albums %}
+		<p> {{album.album}} </p>
+	{% endfor %}
+
+{% endblock content %}

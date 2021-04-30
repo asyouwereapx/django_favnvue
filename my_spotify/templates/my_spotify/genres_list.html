@@ -2,12 +2,12 @@
 
 {% block content %}
 
-<h1> MY SPOTIFY </h1>
 
-<form method="GET"> 
+
+<!-- <form method="GET"> 
 	<input type="text" name = "search" value = "{{search_input}}">
 	<input type="submit" value="filter">
-</form>
+</form> -->
 
 <table>
 	<tr>
@@ -15,12 +15,13 @@
 	</tr>
 	{% for genre in genres %}
 	<tr>
-		<td><a href= "{% url 'genre' genre.id %}"> {{genre.title}} </td>
+		<td><a href= "{% url 'genre' genre.genre %}"> {{genre.genre}} </td>
 	</tr>
 
 	{% empty %}
 	<h3>No genres added</h3>
 	{% endfor %}
+
 </table>
 
 {% endblock content %}

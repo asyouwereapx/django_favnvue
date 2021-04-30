@@ -1,0 +1,27 @@
+{% extends 'my_spotify/main.html' %}
+
+{% block content %}
+
+<h1> MY SPOTIFY </h1>
+
+<form method="GET"> 
+	<input type="text" name = "search" value = "{{search_input}}">
+	<input type="submit" value="filter">
+</form>
+
+<table>
+	<tr>
+		<th> Item </th>
+	</tr>
+	{% for artist in artists %}
+	<tr>
+		<td> {{artist.artist}} </td>
+	</tr>
+
+	{% empty %}
+	<h3>No genres added</h3>
+	{% endfor %}
+
+</table>
+
+{% endblock content %}

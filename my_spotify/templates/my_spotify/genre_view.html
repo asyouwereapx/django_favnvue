@@ -1,0 +1,11 @@
+{% extends 'my_spotify/main.html' %}
+
+{% block content %}
+	
+	<p> {{genre}} </p>
+	{% for a in artists_by_genre %}
+		<a href= "{% url 'artist' a.artist %}"> {{a.artist}}
+		<!-- <p> {{a.artist}} </p> -->
+	{% endfor %}
+
+{% endblock content %}
