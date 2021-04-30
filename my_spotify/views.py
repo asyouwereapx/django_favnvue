@@ -11,7 +11,6 @@ def spotify_view(request):
 
 def genre_view(request, genre):
 	artists_by_genre = Spotify.objects.filter(genre = genre)
-	# data = Spotify.objects.get(slug=slug)
 	context = {
 		'genre': genre,
 		'artists_by_genre': artists_by_genre
@@ -21,12 +20,10 @@ def genre_view(request, genre):
 
 def artist_view(request, artist):
 	albums = Spotify.objects.filter(artist = artist)
-	# data = Spotify.objects.get(slug=slug)
 	context = {
 		'artist': artist,
 		'albums': albums
 	}
-	
 	return render(request, "my_spotify/artist_view.html", context)
 
 class GenresList(ListView):
@@ -71,18 +68,7 @@ class GenresList(ListView):
 # 		context['search_input'] = search
 # 		return context
 
-class SpotifyDetail(DetailView):
-	model = Spotify
-	# context_object_name = 'genre'
 
-	template_name = 'my_spotify/artist_by_genre.html'
-
-	# def get_context_data(self, **kwargs):
-	# 	context = super().get_context_data(**kwargs)
-	# 	context['artists'] = 
-	# 	return context
-
-	# data = Spotify.objects.filter(pk = kwargs['pk'])
 
 	
 
